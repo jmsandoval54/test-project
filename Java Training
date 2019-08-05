@@ -100,6 +100,221 @@ After doing this, you may fix the identity used for this commit with:
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 README.md
 [Java@localhost test-project]$ 
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git commit -m
+error: switch `m' requires a value
+usage: git commit [options] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit hook
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+[Java@localhost test-project]$ git commit -m "Initial commit"
+[master 3ecd0e1] Initial commit
+ Committer: Java <Java@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 104 insertions(+)
+ create mode 100644 Java Training
+[Java@localhost test-project]$ ls -la
+total 8
+drwxrwxr-x.  3 Java Java   56 Aug  6 00:19 .
+drwx------. 26 Java Java 4096 Aug  6 00:07 ..
+drwxrwxr-x.  8 Java Java  166 Aug  6 00:21 .git
+-rw-r--r--.  1 Java Java 2479 Aug  6 00:19 Java Training
+-rw-rw-r--.  1 Java Java    0 Aug  6 00:13 README.md
+[Java@localhost test-project]$ git push origin master
+Username for 'https://github.com': jmsandoval54
+Password for 'https://jmsandoval54@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.62 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/jmsandoval54/test-project.git
+ * [new branch]      master -> master
+[Java@localhost test-project]$ ls 
+Java Training  README.md
+[Java@localhost test-project]$ vi Java Training
+2 files to edit
+[Java@localhost test-project]$ ls -la
+total 8
+drwxrwxr-x.  3 Java Java   56 Aug  6 00:27 .
+drwx------. 26 Java Java 4096 Aug  6 00:27 ..
+drwxrwxr-x.  8 Java Java  166 Aug  6 00:21 .git
+-rw-r--r--.  1 Java Java 2480 Aug  6 00:22 Java Training
+-rw-rw-r--.  1 Java Java    0 Aug  6 00:13 README.md
+[Java@localhost test-project]$ vi Java Training.txt
+2 files to edit
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git push origin master
+Username for 'https://github.com': jmsandoval54	
+Password for 'https://jmsandoval54@github.com': 
+Everything up-to-date
+[Java@localhost test-project]$ cat README.md
+[Java@localhost test-project]$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/jmsandoval54/test-project
+   3ecd0e1..f79fafb  master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+[Java@localhost test-project]$ cat README.md
+[Java@localhost test-project]$ git pull origin master
+From https://github.com/jmsandoval54/test-project
+ * branch            master     -> FETCH_HEAD
+Updating 3ecd0e1..f79fafb
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+[Java@localhost test-project]$ cat README.md
+## Test Project
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git push origin master
+Username for 'https://github.com': jmsandoval54	
+Password for 'https://jmsandoval54@github.com': 
+Everything up-to-date
+[Java@localhost test-project]$ git commit -m "Added"
+[master 3671e22] Added
+ Committer: Java <Java@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+[Java@localhost test-project]$ git push origin master
+Username for 'https://github.com': jmsandoval54	
+Password for 'https://jmsandoval54@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jmsandoval54/test-project.git/'
+[Java@localhost test-project]$ git push origin master
+Username for 'https://github.com': jmsandoval54
+Password for 'https://jmsandoval54@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 305 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/jmsandoval54/test-project.git
+   f79fafb..3671e22  master -> master
+[Java@localhost test-project]$ cd ~
+[Java@localhost ~]$ pwd
+/home/Java
+[Java@localhost ~]$ git clone git@github.com:venerguevarra/java-training-workspace.git
+Cloning into 'java-training-workspace'...
+The authenticity of host 'github.com (52.74.223.119)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+RSA key fingerprint is MD5:16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,52.74.223.119' (RSA) to the list of known hosts.
+remote: Enumerating objects: 227, done.
+remote: Counting objects: 100% (227/227), done.
+remote: Compressing objects: 100% (206/206), done.
+remote: Total 227 (delta 15), reused 227 (delta 15), pack-reused 0
+Receiving objects: 100% (227/227), 64.99 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (15/15), done.
+[Java@localhost ~]$ cd test-project
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git commit -m "Added clone"
+# On branch master
+nothing to commit, working directory clean
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git commit -m "Added"
+# On branch master
+nothing to commit, working directory clean
+[Java@localhost test-project]$ cd ~
+[Java@localhost ~]$ cd test-project
+[Java@localhost test-project]$ ls
+Java Training  README.md
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git commit -m "Added clone"
+# On branch master
+nothing to commit, working directory clean
+[Java@localhost test-project]$ git push origin master
+Username for 'https://github.com': jmsandoval54
+Password for 'https://jmsandoval54@github.com': 
+Everything up-to-date
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git commit -m "Added clone"
+# On branch master
+nothing to commit, working directory clean
+[Java@localhost test-project]$ vi Java Training
+2 files to edit
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git commit -m "Adde"
+# On branch master
+nothing to commit, working directory clean
+[Java@localhost test-project]$ cd ~
+[Java@localhost ~]$ rm -rf java-training-workspace/
+[Java@localhost ~]$ 
+
 
 
 
