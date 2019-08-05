@@ -1,0 +1,104 @@
+JAVA Programming - August 5-9, 2019
+
+CODE Repository
+GIT - subscribe
+BITBUCKET - Free upto 5 @ a time
+
+JDK - Dev
+JRE - Client
+
+one instance one workspace -eclipse
+one instance one project - intelliJ
+
+Installation
+JDK
+Environment
+Eclipse - eclipse.org
+IntelliJ
+
+Switch perspective - change Envi e.g. debug
+
+library - .jar (java archive)
+
+//main control space public static void main(String[] args) {
+//syso 		     System.out.println("Hello World");
+
+RULE
+one top level public class 
+
+ORder of declaration
+> package
+> import
+> class
+
+ctrl + shift F - format
+
+Class variable declared inside the class outside the method with "static"
+instance variable without "static" (Global variable)
+
+preffix = increment the evaluated value
+suffix = as is
+
+int x = 5, y = 3, z = 1;
+int result = (x++) + (y++) + (--y) + (z++)
+
+result = 12
+y = 6
+z = 2
+
+int x = 1;
+x = x + 5
+(x += 5) //shortcut
+
+xor
+tt = f
+tf = t
+ff = f
+
+class blueprint of an object, collection of an object sharing common attributes
+object - instance of an class,has attributes
+
+
+ssh-keygen 
+
+install git
+sudo yum install git
+
+
+Sync local to GIT Online
+[Java@localhost ~]$ mkdir test-project
+[Java@localhost ~]$ cd test-project
+[Java@localhost test-project]$ pwd 
+/home/Java/test-project
+[Java@localhost test-project]$ git init
+Initialized empty Git repository in /home/Java/test-project/.git/
+[Java@localhost test-project]$ ls -la
+total 4
+drwxrwxr-x.  3 Java Java   18 Aug  6 00:08 .
+drwx------. 26 Java Java 4096 Aug  6 00:07 ..
+drwxrwxr-x.  7 Java Java  119 Aug  6 00:08 .git
+[Java@localhost test-project]$ git remote add origin https://github.com/jmsandoval54/test-project.git
+[Java@localhost test-project]$ touch README.md
+[Java@localhost test-project]$ ls -l
+total 0
+-rw-rw-r--. 1 Java Java 0 Aug  6 00:13 README.md
+[Java@localhost test-project]$ git add .
+[Java@localhost test-project]$ git commit -m "Initial commit"
+[master (root-commit) 7fcf1e9] Initial commit
+ Committer: Java <Java@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+[Java@localhost test-project]$ 
+
+
