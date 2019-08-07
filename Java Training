@@ -1,5 +1,6 @@
 JAVA Programming - August 5-9, 2019
 
+Day 1
 CODE Repository
 GIT - subscribe
 BITBUCKET - Free upto 5 @ a time
@@ -315,6 +316,42 @@ nothing to commit, working directory clean
 [Java@localhost ~]$ rm -rf java-training-workspace/
 [Java@localhost ~]$ 
 
+Day 1
+garbage collector - System.gc() / Runtime.getRuntime().gc()
+ 	- happens when there are no ref (null)
+SRP - single responsibility
 
+3 Layers [Presentation, Business, Data] (Monolith > CS > Layering)
+
+ctrl + shift O - organized import
+
+constructor - set initial state of the object
+	    - cannot be inherited
+	    - in calling constructor, it should always be the first line inside the constructor
+
+final can be used againts a class, method and variable
+
+CORBA
+
+instance variable - same state
+class variable - within the class (static)
+
+OOP
+method overloading - depends on method name, parameter number and type
+Polymorphism - multiple method of the same name
+Inheritance - parent child relationship
+Encapsulation - set and get ; reason : computed value and local validation
+
+public free for all
+private with in the class
+default access mod is accessible with in same package
+protected - protected from other package, can be thru inheritance or within same package
+Overriding - same name, type and param
+ 	   pattern : (private) > default > protected > public
+
+
+abstract method - doesnt have a body
+		> can be define in interface
+		> all methods in interface are public and abstract
 
 
