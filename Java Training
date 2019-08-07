@@ -354,4 +354,10 @@ abstract method - doesnt have a body
 		> can be define in interface
 		> all methods in interface are public and abstract
 
+*******
+Abstract Class
+- can only define abstract method inside an abstract class
+- may/may not contain non abstract method
+- cannot be instantiated
+- purpose is for inheritance, therefore cannot be abstract and final at the same time
 
