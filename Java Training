@@ -340,7 +340,7 @@ OOP
 method overloading - depends on method name, parameter number and type
 Polymorphism - multiple method of the same name
 Inheritance - parent child relationship
-Encapsulation - set and get ; reason : computed value and local validation
+Encapsulation - set and get ; reason : computed value and local validation; data hiding
 
 public free for all
 private with in the class
@@ -360,4 +360,16 @@ Abstract Class
 - may/may not contain non abstract method
 - cannot be instantiated
 - purpose is for inheritance, therefore cannot be abstract and final at the same time
+
+*******
+
+Exceptions
+Uncheck -runtime subclass
+Check - exception subclass
+Error: compilation, runtime, logical and end user
+IO exception is a check exception
+Float - object reference ; float - primitive type
+
+Best practice - create proper exception (e.g. invalid user or invalid pw or Both)
+
 
