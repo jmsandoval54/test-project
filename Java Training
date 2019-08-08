@@ -372,4 +372,23 @@ Float - object reference ; float - primitive type
 
 Best practice - create proper exception (e.g. invalid user or invalid pw or Both)
 
+API
+> UNIQUE ; SORTING
+Map - key value form
+Vector - thread safe
+LIST 	- List and Vector
+	- is an array(resizable); 
+	- ordered and unsorted collection; 
+	- duplicated; 
+	- can contain any type of object
+LinkedLIst - performance 
 
+SET	- HashSet and Treeset
+	- unordered but maintained unique elements
+  treeset - ordered in ascending
+
+QUEUE(Stack) FIFO
+MAP - hashmap unordered; may contain unique key including null;
+	treemap - sorted 
+Comparable interface - CompareTo java.lang
+Comparator interface - compare java.util
