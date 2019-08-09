@@ -392,3 +392,24 @@ MAP - hashmap unordered; may contain unique key including null;
 	treemap - sorted 
 Comparable interface - CompareTo java.lang
 Comparator interface - compare java.util
+
+************************
+
+Thread - thread of execution
+	- main thread
+
+Concurrency - parallel execution
+
+running(starting) multiThread - result depends(cpu)
+
+IO
+streams - sequential flow of bytes
+
+MariaDB 3306
+
+Statements , Prepared S, Callable S
+
+Atomicity -
+Consistency - 
+Isolation - 
+Durability -
